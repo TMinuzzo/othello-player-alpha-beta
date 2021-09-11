@@ -1,7 +1,5 @@
 from typing import Tuple
 from board import Board
-import random
-import sys
 from copy import deepcopy
 
 INFINITY = float('inf')
@@ -14,9 +12,6 @@ def make_move(the_board, color):
     :param color: a character indicating the color to make the move ('B' or 'W')
     :return: (int, int) tuple with x, y indexes of the move (remember: 0 is the first row/column)
     """
-    # o codigo abaixo apenas retorna um movimento aleatorio valido para
-    # a primeira jogada com as pretas.
-    # Remova-o e coloque a sua implementacao da poda alpha-beta
 
     game_strategy = GameStrategy(4, the_board, color)
     return game_strategy.alpha_beta_min_max()
