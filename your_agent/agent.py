@@ -41,6 +41,10 @@ class GameStrategy:
         """
 
         legal_moves = self.board.legal_moves(self.color)
+
+        if len(legal_moves) == 0:
+            return (-1, -1)
+            
         final_move = legal_moves[0]
 
         best_score = -INFINITY
